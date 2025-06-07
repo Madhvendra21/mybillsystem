@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+#headerWrapper {
+    margin-left: 30px;
+    width: 100%;
+}
+
+.logo {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 35px;
+    font-family: fantasy;
+}
+
+.tagline {
+    font-size: 10px;
+    margin-top: 50px;
+    margin-left: -123px;
+    font-family: monospace;
+}
+
+.nav-wrapper {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+#productEntry {
+    margin-left: 30px;
+    margin-right: 80px;
+    margin-bottom: 20px;
+    
+}
+
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+
+#productListWrapper {
+    width: 100%;
+    padding: 10px;
+}
+
+#productListWrapper input {
+    width: 25%;
+}
+
+#productListWrapper .product {
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#productListWrapper .product .product-details {
+    margin-left: 160px;
+}
+
+.container.ng-enter {
+    -webkit-transition: 0.5s linear all;
+    -moz-transition:0.5s linear all;
+    -o-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+.container.ng-enter-active {
+    opacity: 1;
+}
+
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stat</title>
+  <base href="/">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+   <div id="headerWrapper">
+            <span class="logo pull-left">BillingApp</span>
+            <span class="tagline pull-left">India's largest online supermarket</span>
+            <div class="nav-wrapper pull-left">
+                <ul class="nav nav-pills">
+                    <li class="active"><a href="#">ProductEntry</a></li>
+                    <li><a href="index2.html">BillingPage</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <input id="name" class="form-control"
+       formControlName="name" required >
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+     class="alert alert-danger">
+
+  <div *ngIf="name.errors.required">
+    Name is required.
+  </div>
+  <div *ngIf="name.errors.minlength">
+    Name must be at least 4 characters long.
+  </div>
+  <div *ngIf="name.errors.forbiddenName">
+    Name cannot be Bob.
+  </div>
+</div>
+
+         <div id="productEntry">
+            <form action="http://localhost:3000/connectdb" method="GET">
+                <fieldset class="scheduler-border">
+                    <legend class="scheduler-border" align="right">Product Entry</legend>
+                    <label>product_code:</label>&nbsp;<input type="text" name="code"/>
+                    <br><br>
+                    <label>product_name:</label><input type="text" name="name"/>
+                    <br/><br/>
+                    <label>Product_price:</label><input type="text" name="price"/>
+                    <br/><br/>
+                    <label>product_gst:</label><input type="text" name="gst"/>
+                <br/>
+                <input type="submit" value="Submit" class="button"/>
+                </fieldset>
+            </form>
+         </div>
+
+  <app-root></app-root>
+  
+  <span>
+      <form action="http://localhost:3100/deletedb" method="GET">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border" align="right">Entry to delete</legend>
+            <h3>Enter the Product Code</h3><input type="text" name="product_code" placeholder="product you want to remove" required></input>
+            <input type="submit" value="Delete" class="button"/>
+        </fieldset>
+      </form>
+  </span>
+
+  <span>
+      <form action="http://localhost:3200/updatedb" method="GET">
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border" align="right">Entry to update</legend>
+        <h3> Product_Details </h3>
+        <input type="text" name="product_code" required placeholder="product_code"/>
+        <input type="text" name="product_name" placeholder="product_name"/>
+        <input type="text" name="product_price" placeholder="product_price"/>
+        <input type="text" name="product_gst" placeholder="product_gst"/>
+        <br/>
+        <input type="submit" value="Update" class="button"/>
+      </form>
+  </span>
+
+</body>
+</html>
